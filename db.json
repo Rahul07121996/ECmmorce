@@ -11,12 +11,6 @@
       "password": "Pank123",
       "email": "Pan@gamil.com",
       "id": 2
-    },
-    {
-      "name": "Sam",
-      "password": "Sam123",
-      "email": "S@gmail.com",
-      "id": 3
     }
   ]
 }

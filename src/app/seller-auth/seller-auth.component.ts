@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SellerServiceService } from '../service/seller-service.service';
-import { Observable } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { Router } from '@angular/router';
+
+import { Login, Signup } from '../data-type';
 
 @Component({
   selector: 'app-seller-auth',
@@ -11,20 +10,29 @@ import { Router } from '@angular/router';
 })
 export class SellerAuthComponent implements OnInit {
 
-  constructor(private seller:SellerServiceService,private route:Router) { }
+   IsSignupLogin = false;
+   Isloginerror:string='';
+  constructor(private seller:SellerServiceService) { }
 
   ngOnInit(): void {
+    this.seller.relocalSeller();
   }
   
-  signup(data: object): void {
-    console.log(data);  // Log the data for debugging purposes
-     
-    this.seller.UserSignup(data).subscribe((result=>{
-     
-         if(result){
-          this.route.navigate(["seller-home"]);
+  signup(data: Signup): void {
+      // Log the data for debugging purposes
+    this.seller.UserSignup(data);
+    
+  }
+  Login(data:Login):void{
+     this.seller.UserLogin(data);
+     this.seller.authLoginError.subscribe((error)=>{
+         if(error){
+            this.Isloginerror = "Email and password are not correct";
          }
-    }))
+     })
+  }
+  openSwitchForm(){
+     this.IsSignupLogin = !this.IsSignupLogin
   }
   
 }

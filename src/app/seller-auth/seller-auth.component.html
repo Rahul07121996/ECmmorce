@@ -1,5 +1,5 @@
 
-<div class="seller-auth">
+<div *ngIf="IsSignupLogin" class="seller-auth">
    <div class="sign-up">
     <h1>Seller Signup</h1>
     <form class="common-form" #sellerSignup="ngForm" (ngSubmit)="signup(sellerSignup.value)">
@@ -7,6 +7,22 @@
         <input type="password" class="form-input" ngModel name="password" placeholder="Eneter password">
         <input type="text" class="form-input" ngModel name ="email" placeholder="Eneter email">
         <button class="form-button">signup</button>
+        <a class="auth-toggle-link" (click)="openSwitchForm()">Already have account? Click for Login</a>
+
     </form>
    </div>
 </div> 
+
+<div *ngIf="!IsSignupLogin" class="seller-auth">
+    <div class="sign-up">
+     <p class="error-p">{{Isloginerror}}</p>   
+     <h1>Seller Login</h1>
+     <form class="common-form" #sellerLogin="ngForm" (ngSubmit)="Login(sellerLogin.value)">
+        <input type="text" class="form-input" ngModel name ="email" placeholder="Eneter email">
+         <input type="password" class="form-input" ngModel name="password" placeholder="Eneter password">
+         <button class="form-button">Login</button>
+       <a class="auth-toggle-link" (click)="openSwitchForm()">Don't have account? Click for sign-up</a>
+
+     </form>
+    </div>
+ </div> 
