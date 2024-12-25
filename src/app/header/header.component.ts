@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
      
     this.route.events.subscribe((val)=>{
      console.log(val);
+     console.log("123");
     })
   }
 
