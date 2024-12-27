@@ -12,5 +12,43 @@
       "email": "Pan@gamil.com",
       "id": 2
     }
+  ],
+  "products": [
+    {
+      "name": "Samsung m 40 a ",
+      "price": "550",
+      "category": "mobile",
+      "color": "white",
+      "description": "this is a Samsung product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "id": 1
+    },
+    {
+      "name": "I phone 14",
+      "price": "10000",
+      "category": "mobile",
+      "color": "black",
+      "description": "An apple product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "id": 2
+    },
+    {
+      "name": "HP Laptop",
+      "price": "50000",
+      "category": "Laptop",
+      "color": "black",
+      "description": "Hp laptop for student and professionals",
+      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
+      "id": 3
+    },
+    {
+      "name": "I phone 17",
+      "price": "233333",
+      "category": "mobile",
+      "color": "blue",
+      "description": "An apple product",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
+      "id": 4
+    }
   ]
 }
